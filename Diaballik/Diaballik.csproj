@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{401CF137-8678-4392-A88D-4CA77828EFC5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Diaballik</RootNamespace>
+    <AssemblyName>Diaballik</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LiteDB">
+      <HintPath>..\LiteDB.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataManager\GameDataManager.cs" />
+    <Compile Include="Element\Ball.cs" />
+    <Compile Include="BallRandom.cs" />
+    <Compile Include="Board.cs" />
+    <Compile Include="DataManager\GameModelDB.cs" />
+    <Compile Include="DataManager\TurnModelDB.cs" />
+    <Compile Include="Exceptions\ConfigurationPlayerException.cs" />
+    <Compile Include="Exceptions\PlayerNumberException.cs" />
+    <Compile Include="Exceptions\PlayerSameColorException.cs" />
+    <Compile Include="Memento\MementoTurn.cs" />
+    <Compile Include="Noob.cs" />
+    <Compile Include="ObserverEndGame.cs" />
+    <Compile Include="Properties.cs" />
+    <Compile Include="Commands\Command.cs" />
+    <Compile Include="EnemyAmongUs.cs" />
+    <Compile Include="DataManager\DBManager.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="GameBuilder.cs" />
+    <Compile Include="IAStrategy.cs" />
+    <Compile Include="Memento\MementoObject.cs" />
+    <Compile Include="Memento\MementoManager.cs" />
+    <Compile Include="Commands\MoveBall.cs" />
+    <Compile Include="Commands\MovePiece.cs" />
+    <Compile Include="Element\Piece.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="PlayerBuilder.cs" />
+    <Compile Include="PlayerHuman.cs" />
+    <Compile Include="PlayerHumanBuilder.cs" />
+    <Compile Include="PlayerIA.cs" />
+    <Compile Include="PlayerIABuilder.cs" />
+    <Compile Include="Progressive.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Replay\PlayerReplay.cs" />
+    <Compile Include="Replay\ReplayManager.cs" />
+    <Compile Include="Scenario.cs" />
+    <Compile Include="Commands\SelectionBall.cs" />
+    <Compile Include="Commands\SelectionPiece.cs" />
+    <Compile Include="Standart.cs" />
+    <Compile Include="Starting.cs" />
+    <Compile Include="Tile.cs" />
+    <Compile Include="Utils\ViewModelBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Diaballik.cd" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

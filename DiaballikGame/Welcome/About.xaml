@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="DiaballikGame.Welcome.About"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DiaballikGame.Welcome"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid Margin="30,30,30,30">
+        <StackPanel>
+            <TextBlock FontSize="20">Diaballik</TextBlock>
+            <TextBlock Margin="0,10,0,0">Diaballik's rules are simple. Each opponent has a team composed of seven players, <LineBreak/>
+                one of which has a ball. There is no mechanism to remove players, <LineBreak/>
+                so there are always 14 players in the game.</TextBlock>
+            <TextBlock Margin="0,10,0,0">The goal of the game is to bring a player to the opponent's side with the ball.</TextBlock>
+            <TextBlock Margin="0,10,0,0">Opponents take turns and can optionally take three actions during their turn.<LineBreak/>
+             A action is to move one player just one horizontal or vertical space or move the ball in any directions.</TextBlock>
+            <TextBlock Margin="0,10,0,0">The player with the ball can throw his ball to another player of his team who is located<LineBreak/>
+             in the vertical line, the horizontal line or a diagonal line and if no opposing player is in the way. <LineBreak/>
+             As in handball, the player with the ball cannot move while he has the ball. So to move, the ball holder <LineBreak/>
+             must pass to one of his partners. Moves can only be made in the horizontal or vertical direction and only if the destination<LineBreak/>
+            is unoccupied. Moving diagonally requires two moves, since one must move horizontally, then vertically, <LineBreak/>
+                in two stages (as such one cannot move diagonally between two pieces).</TextBlock>
+            <TextBlock Margin="0,10,0,0" FontSize="20">made with love by Bastien Lelarge / Damien Villiers</TextBlock>
+            <Button Style="{StaticResource MaterialDesignFlatButton}"
+                                        IsCancel="True"
+                                        Margin="0 8 8 0"
+                                        Command="md:DialogHost.CloseDialogCommand">
+                CANCEL
+            </Button>
+        </StackPanel>  
+    </Grid>
+</UserControl>

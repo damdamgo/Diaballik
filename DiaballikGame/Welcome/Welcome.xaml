@@ -1,0 +1,20 @@
+﻿<Window x:Class="DiaballikGame.Welcome.Welcome"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:DiaballikGame.Welcome"
+        mc:Ignorable="d"
+        Title="Diaballik" Height="720" Width="870">
+    <md:DialogHost IsOpen="False">
+        <Grid>
+            <DockPanel LastChildFill="True">
+                <ContentControl Content="{Binding MenuView}" DockPanel.Dock="Top" />
+                <Grid>
+                    <ContentControl Content="{Binding CurrentView}" />
+                </Grid>
+            </DockPanel>
+        </Grid>
+    </md:DialogHost>
+</Window>

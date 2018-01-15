@@ -1,0 +1,6 @@
+﻿  Starting.cpp
+d:\documents\insa\poo\diaballik\diaballik-villiers-lelarge\ialib\starting.cpp(11): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
+d:\documents\insa\poo\diaballik\diaballik-villiers-lelarge\ialib\starting.cpp(56): warning C4018: '<' : incompatibilité signed/unsigned
+d:\documents\insa\poo\diaballik\diaballik-villiers-lelarge\ialib\starting.cpp(163): warning C4715: 'Starting::choosedestinationPieceWhoBlock' : les chemins de contrôle ne retournent pas tous une valeur
+  IAlib.vcxproj -> D:\Documents\Insa\POO\diaballik\diaballik-villiers-lelarge\Debug\libCPP.dll
+  IAlib.vcxproj -> D:\Documents\Insa\POO\diaballik\diaballik-villiers-lelarge\Debug\libCPP.pdb (Partial PDB)

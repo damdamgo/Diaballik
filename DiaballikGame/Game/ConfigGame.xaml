@@ -1,0 +1,68 @@
+﻿<UserControl x:Class="DiaballikGame.Game.ConfigGame"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:wpfx="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:local="clr-namespace:DiaballikGame.Game"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Foreground="White">
+    <StackPanel Background="White">
+        <TextBlock Margin="0,50,0,0" Foreground="Black" TextAlignment="Center" FontSize="22">Creation game</TextBlock>
+        <Grid Margin="100,50,100,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="5*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions >
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Margin="0,0,0,20" Width="Auto" Grid.Column="0" Grid.Row="0" >
+                <Label Content="Username Player 1" FontSize="16" VerticalAlignment="Center"/>
+                
+            </StackPanel>
+            <StackPanel Margin="0,0,0,20" Width="Auto" Grid.Column="1" Grid.Row="0">
+                <TextBox Name="namePlayer1" Foreground="Black" TextChanged="updatePlayButton" BorderThickness="1"/>
+                <wpfx:ColorPicker SelectedColor="Blue" Name="colorPlayer1" SelectedColorChanged="colorPlayer_SelectedColorChanged"/>
+            </StackPanel>
+            <StackPanel Margin="0,0,0,20" Width="Auto" Grid.Column="0" Grid.Row="1">
+                <Label Content="Username Player 2" VerticalAlignment="Center" FontSize="16"/>
+            </StackPanel>
+            <StackPanel Margin="0,0,0,20" Width="Auto" Grid.Column="1" Grid.Row="1">
+                <TextBox Name="namePlayer2" Foreground="Black" TextChanged="updatePlayButton" BorderThickness="1" />
+                <wpfx:ColorPicker SelectedColor="Red" Name="colorPlayer2" SelectedColorChanged="colorPlayer_SelectedColorChanged"/>
+            </StackPanel>
+            <StackPanel Margin="0,0,0,20" Width="Auto" Grid.Column="0" Grid.Row="2">
+                <Label Content="Type player 2 " FontSize="16"/>
+            </StackPanel>
+            <StackPanel Margin="0,0,0,20" Width="Auto" Grid.Column="1" Grid.Row="2">
+                    <RadioButton Name="Human_RadioButton" Checked="IsHuman" Foreground="Black">Human</RadioButton>
+                    <RadioButton Name="AI_RadioButton" Checked="IsAI" Foreground="Black" Unchecked="IsNotAI">AI</RadioButton>
+            </StackPanel>
+            <StackPanel Margin="0,0,0,20" Width="Auto" Grid.Column="0" Grid.Row="3">
+                <Label Content="Level AI " FontSize="16"/>
+            </StackPanel>
+            <StackPanel Margin="0,0,0,20" Name="Level_AI" IsEnabled="False" Width="Auto" Grid.Column="1" Grid.Row="3">
+                <RadioButton Name="Noob_RadioButton" Checked="IsNoob" Foreground="Black">Noob</RadioButton>
+                <RadioButton Name="Starting_RadioButton" Checked="IsStarting" Foreground="Black">Starting</RadioButton>
+                <RadioButton Name="Progressive_RadioButton" Checked="IsProgressive" Foreground="Black">Progressive</RadioButton>
+            </StackPanel>
+            <StackPanel Margin="0,0,0,20" Width="Auto" Grid.Column="0" Grid.Row="4">
+                <Label Content="Game Scenario " FontSize="16"/>
+            </StackPanel>
+            <StackPanel Margin="0,0,0,20" Width="Auto" Grid.Column="1" Grid.Row="4">
+                <RadioButton Name="Standart_RadioButton" Checked="IsStandart" Foreground="Black">Standart</RadioButton>
+                <RadioButton Name="BallRandom_RadioButton" Checked="IsBallRandom" Foreground="Black">Ball Random</RadioButton>
+                <RadioButton Name="EnemyAmongUs_RadioButton" Checked="IsEnemyAmongUs" Foreground="Black">Enemy Among Us</RadioButton>
+            </StackPanel>
+        </Grid>
+        
+
+        <Button Content="Play" Visibility="{Binding AccessButtonPlay}" Width="100" Click="Play"/>
+    </StackPanel>
+</UserControl>
